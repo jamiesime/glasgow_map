@@ -42,3 +42,7 @@ MapWrapper.prototype.bounceMarkers = function(){
     marker.setAnimation(google.maps.Animation.BOUNCE);
   });
 }
+
+MapWrapper.prototype.recenterMap = function(newCoords){
+  this.googleMap.setCenter(newCoords);
+}
