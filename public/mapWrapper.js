@@ -46,3 +46,9 @@ MapWrapper.prototype.bounceMarkers = function(){
 MapWrapper.prototype.recenterMap = function(newCoords){
   this.googleMap.setCenter(newCoords);
 }
+
+MapWrapper.prototype.goToGeolocation = function(map){
+  navigator.geolocation.getCurrentPosition(function(position){
+    map.googleMap.setCenter({lat: position.coords.latitude, lng: position.coords.longitude});
+  });
+}

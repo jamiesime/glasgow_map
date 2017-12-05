@@ -18,6 +18,11 @@ var initialise = function(){
   glasgowButton.addEventListener('click', function(){
     mainMap.recenterMap(center);
   });
+
+  var whereamiButton = document.getElementById('whereami');
+  whereamiButton.addEventListener('click', function(){
+    mainMap.goToGeolocation(mainMap);
+  });
 }
 
 
